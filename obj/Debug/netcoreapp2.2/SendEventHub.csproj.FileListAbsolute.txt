@@ -1,0 +1,10 @@
+/Users/codingstar/Documents/workspaces_VSCode/SendEventHub/bin/Debug/netcoreapp2.2/SendEventHub.deps.json
+/Users/codingstar/Documents/workspaces_VSCode/SendEventHub/bin/Debug/netcoreapp2.2/SendEventHub.runtimeconfig.json
+/Users/codingstar/Documents/workspaces_VSCode/SendEventHub/bin/Debug/netcoreapp2.2/SendEventHub.runtimeconfig.dev.json
+/Users/codingstar/Documents/workspaces_VSCode/SendEventHub/bin/Debug/netcoreapp2.2/SendEventHub.dll
+/Users/codingstar/Documents/workspaces_VSCode/SendEventHub/bin/Debug/netcoreapp2.2/SendEventHub.pdb
+/Users/codingstar/Documents/workspaces_VSCode/SendEventHub/obj/Debug/netcoreapp2.2/SendEventHub.csprojAssemblyReference.cache
+/Users/codingstar/Documents/workspaces_VSCode/SendEventHub/obj/Debug/netcoreapp2.2/SendEventHub.AssemblyInfoInputs.cache
+/Users/codingstar/Documents/workspaces_VSCode/SendEventHub/obj/Debug/netcoreapp2.2/SendEventHub.AssemblyInfo.cs
+/Users/codingstar/Documents/workspaces_VSCode/SendEventHub/obj/Debug/netcoreapp2.2/SendEventHub.dll
+/Users/codingstar/Documents/workspaces_VSCode/SendEventHub/obj/Debug/netcoreapp2.2/SendEventHub.pdb
