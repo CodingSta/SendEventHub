@@ -11,7 +11,7 @@ namespace SendEventHub
 {
     class Program
     {
-        private const string EVHConnStr = "Endpoint=sb://minhub.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=8iIc5K+2fiIy+n7FApprDxzty56jbOXCIlBC5In7FXM=";
+        private const string EVHConnStr = "Endpoint=sb://..........";
         private static EventHubClient eventHubClient;
         private const string EventHubName = "hub01";
         static float temperature = 0.0f;
