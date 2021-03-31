@@ -11,11 +11,11 @@ namespace SendEventHub
 {
     class Program
     {
-        private const string EVHConnStr = "Endpoint=sb://..........";
+        private const string EVHConnStr = "Endpoint=sb://===";
         private static EventHubClient eventHubClient;
         private const string EventHubName = "hub01";
         static float temperature = 0.0f;
-        static float humidity = 0.0f;
+        static float humidity = 50.0f;
 
         static void Main(string[] args)
         {
@@ -23,15 +23,18 @@ namespace SendEventHub
             //Console.WriteLine("Hello World!");
         }
 
-        private static async Task MainAsync(string[] args){
+        private static async Task MainAsync(string[] args)
+        {
 
-            var connStrBuilder = new EventHubsConnectionStringBuilder(EVHConnStr){
+            var connStrBuilder = new EventHubsConnectionStringBuilder(EVHConnStr)
+            {
                 EntityPath = EventHubName
             };
             eventHubClient = EventHubClient.CreateFromConnectionString(connStrBuilder.ToString());
 
             StringBuilder builderA = new StringBuilder();
-            while(true){
+            while (true)
+            {
 
                 Int32 unixTimestamp = (Int32)(DateTime.UtcNow.Subtract(new DateTime(1970, 1, 1))).TotalSeconds;
 
@@ -43,18 +46,20 @@ namespace SendEventHub
                 builderA.Append(",");
                 // time -> Row Key
                 builderA.Append("\"time\":");
-                builderA.Append("\""+ unixTimestamp +"\"");
+                builderA.Append("\"" + unixTimestamp + "\"");
                 builderA.Append(",");
 
                 // First Data
                 builderA.Append("\"temperature\":");
-                builderA.Append(temperature+=1);
+                if (temperature > 50) temperature = 0;
+                builderA.Append(temperature += 1);
                 builderA.Append(",");
 
                 // Second Data
                 builderA.Append("\"humidity\":");
-                builderA.Append(humidity+=1);
-                
+                if (humidity > 100) humidity = 0;
+                builderA.Append(humidity += 1);
+
                 builderA.Append("}\n");
 
                 Console.WriteLine(builderA);
@@ -63,14 +68,18 @@ namespace SendEventHub
                 await Task.Delay(1000);
             }
         }
-        private static async Task SendMessageToEventHub(string message){
-        try{
-            await eventHubClient.SendAsync(new EventData(Encoding.UTF8.GetBytes(message)));
-        } catch(Exception e) {
-            Console.WriteLine(e.Message);
-        }
+        private static async Task SendMessageToEventHub(string message)
+        {
+            try
+            {
+                await eventHubClient.SendAsync(new EventData(Encoding.UTF8.GetBytes(message)));
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
 
-    }
+        }
 
 
     }

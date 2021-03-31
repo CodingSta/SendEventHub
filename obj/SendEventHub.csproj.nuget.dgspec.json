@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/codingstar/Documents/workspaces_VSCode/SendEventHub/SendEventHub.csproj": {}
+    "/Users/codingstar/Documents/workspaces_DevOps/SendEventHub/SendEventHub.csproj": {}
   },
   "projects": {
-    "/Users/codingstar/Documents/workspaces_VSCode/SendEventHub/SendEventHub.csproj": {
+    "/Users/codingstar/Documents/workspaces_DevOps/SendEventHub/SendEventHub.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/codingstar/Documents/workspaces_VSCode/SendEventHub/SendEventHub.csproj",
+        "projectUniqueName": "/Users/codingstar/Documents/workspaces_DevOps/SendEventHub/SendEventHub.csproj",
         "projectName": "SendEventHub",
-        "projectPath": "/Users/codingstar/Documents/workspaces_VSCode/SendEventHub/SendEventHub.csproj",
+        "projectPath": "/Users/codingstar/Documents/workspaces_DevOps/SendEventHub/SendEventHub.csproj",
         "packagesPath": "/Users/codingstar/.nuget/packages/",
-        "outputPath": "/Users/codingstar/Documents/workspaces_VSCode/SendEventHub/obj/",
+        "outputPath": "/Users/codingstar/Documents/workspaces_DevOps/SendEventHub/obj/",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
@@ -20,13 +20,14 @@
           "/Users/codingstar/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
-          "netcoreapp2.2"
+          "netcoreapp3.1"
         ],
         "sources": {
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "netcoreapp2.2": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {}
           }
         },
@@ -37,17 +38,12 @@
         }
       },
       "frameworks": {
-        "netcoreapp2.2": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "dependencies": {
             "Microsoft.Azure.EventHubs": {
               "target": "Package",
               "version": "[3.0.0, )"
-            },
-            "Microsoft.NETCore.App": {
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[2.2.0, )",
-              "autoReferenced": true
             },
             "Newtonsoft.Json": {
               "target": "Package",
@@ -72,7 +68,18 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.100/RuntimeIdentifierGraph.json"
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[3.1.10, 3.1.10]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.102/RuntimeIdentifierGraph.json"
         }
       }
     }
